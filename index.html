@@ -38,7 +38,10 @@
 
 </head>
 <body>  
-
+    <audio id="myAudio">
+    <source src="upload/prison.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
     <!-- LOADER -->
     <div id="preloader">
         <img class="preloader" src="images/loader.gif" alt="">
@@ -78,7 +81,7 @@
                     <small style="color: white" >I am a Cyber Expert, my aim is to wage a war against cyber criminals being a forensic investigator. I have already started and there's a long way to explore yet : )</small>
                     <div class="btn-wrapper">
                         <div class="text-center">
-                            <a class="btn btn-default wow slideInRight">Let's Discuss Your Project</a>
+                            <a onclick="playAudio()" type="button" class="btn btn-default wow slideInRight">Play Me !</a>
                         </div>
                     </div><!-- end row -->
                 </div>
@@ -366,12 +369,23 @@
 
     <!-- jQuery Files -->
     <script src="js/jquery.min.js"></script>
+    <script>
+    var x = document.getElementById("myAudio"); 
+    function playAudio() { 
+      x.play(); 
+    } 
+
+    function pauseAudio() { 
+      x.pause(); 
+    } 
+    </script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/carousel.js"></script>
     <script src="js/animate.js"></script>
     <script src="js/custom.js"></script>
     <!-- VIDEO BG PLUGINS -->
     <script src="js/videobg.js"></script>
+
 
 </body>
 </html>
